@@ -1,7 +1,7 @@
 package com.example.employee.controller;
 
-import com.example.employee.employee.Employee;
-import com.example.employee.employee.Role;
+import com.example.employee.model.Employee;
+import com.example.employee.model.Role;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -17,8 +17,8 @@ public class EmployeeController {
             @RequestParam(name="age") int age,
             @RequestParam(name="department") String department,
             @RequestParam(name="designation") String designation,
-            @RequestParam(name="domain") String domain){
-
+            @RequestParam(name="domain") String domain
+    ){
         Role role = new Role(department, designation, domain);
         return new Employee(id, fname, lname, age, role);
     }

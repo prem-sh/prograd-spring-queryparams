@@ -1,4 +1,4 @@
-package com.example.employee.employee;
+package com.example.employee.model;
 
 public class Role {
     private String department;
